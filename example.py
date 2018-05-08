@@ -1,0 +1,74 @@
+import requests
+import pandas as pd
+from bs4 import BeautifulSoup
+from selenium import webdriver
+
+#Função para o Web crawler
+def web_crawler(url_partida, limite_links):
+    resultados = {'titulos': [], 'links': []}
+    i = 0
+    for j in range(1, int(limite_links/10)+1):
+        lista_links.append(url_partida + "#?next=0001H1294U" + str(30 * j) + "N")
+    #Para cada url armazenada na lista
+
+
+    #Recupera o código fonte da URL
+    fonte = requests.get(url_partida)
+    fonte_bs = BeautifulSoup(fonte.text)
+    #Para o componente com a classe widget-news-list recupere todas as tags 'a' cujo conteúdo 'href' seja um endereço http válido
+    links_coletados = fonte_bs.find('div', class_='itens-indice').find_all('span', class_='titulo', limit=None)
+    links_links = fonte_bs.find('div', class_='itens-indice').find_all('a')
+
+    #Para cada link recuperado
+    for titulo, link in zip(links_coletados, links_links):
+        resultados['titulos'].append(titulo.contents[0])
+        resultados['links'].append(link.get('href'))
+        i += 1
+
+    for url in lista_links:
+        try:
+            wd = webdriver.Chrome('Utilidades/chromedriver')
+            wd.get(url)
+            fonte_pagina = wd.page_source
+            wd.quit()
+            soup = BeautifulSoup(fonte_pagina)
+            links_coletados = soup.find('div', class_='itens-indice').find_all('span', limit=None)
+            links_links = soup.find('div', class_='itens-indice').find_all('a')
+            for titulo, link in zip(links_coletados, links_links):
+                resultados['titulos'].append(titulo.contents[0])
+                resultados['links'].append(link.get('href'))
+            i += 1
+        except:
+            pass
+
+    return resultados
+
+#Função para o Web scraper
+def web_scraper():
+    #Para cada link armazenado na lista de links
+    for link in lista_links:
+        #Recupera o código fonte
+        fonte = requests.get(link)
+        fonte_bs = BeautifulSoup(fonte.text, 'lxml')
+        #Faz a raspagem das imagens
+        imagens = fonte_bs.find_all('img')
+
+        #Para cada imagem coletada do link
+        for imagem in imagens:
+            #Apresenta o código da imagem raspado
+            print(imagem)
+            print("\n")
+        print("\n")
+
+
+#Inicia a lista_links
+lista_links = []
+#Define que o limite será de 10 links coletados
+limite_links = 200
+#Define a URL de partida
+url_partida = 'https://noticias.uol.com.br/politica/eleicoes/ultimas/'
+
+#Chamada para a função do Web crawler
+titulos = web_crawler(url_partida, limite_links)
+df = pd.DataFrame(titulos)
+df.to_csv('resultados-uol2.csv')
