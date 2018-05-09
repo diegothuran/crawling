@@ -92,6 +92,7 @@ def web_crawler(url_partida, limite_links):
             wd = webdriver.Chrome('Utilidades/chromedriver')
             wd.get(url)
             fonte_pagina = wd.page_source
+            print("aqui")
             wd.quit()
             soup = BeautifulSoup(fonte_pagina)
             links_coletados = soup.find('div', class_='itens-indice').find_all('span', limit=None)
