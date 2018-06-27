@@ -1,0 +1,132 @@
+
+0 - categorias: {'psb', 'pmdb', 'psdb', 'sp'}
+1 - categorias: {'psl'}
+2 - categorias: {'pr', 'sp', 'pt'}
+3 - categorias: set()
+4 - categorias: set()
+5 - categorias: set()
+6 - categorias: {'psdb', 'sp', 'mg'}
+7 - categorias: {'psol', 'pdt', 'pt', 'pcdob', 'pr', 'ac'}
+8 - categorias: set()
+9 - categorias: set()
+10 - categorias: {'pr', 'pt'}
+11 - categorias: set()
+12 - categorias: {'psol', 'pdt', 'pt', 'rs', 'pcdob', 'ac'}
+13 - categorias: {'pdt', 'pt', 'psdb', 'psd', 'rs', 'pmdb', 'psb', 'pr'}
+14 - categorias: {'psdb', 'pt', 'psd', 'ba', 'prb', 'dem', 'psb', 'psc', 'ap', 'ac'}
+15 - categorias: {'psdb', 'pp', 'psl', 'pps', 'df', 'prb', 'sp', 'dem', 'mg', 'ac'}
+16 - categorias: {'psdb', 'pt', 'am', 'psl', 'rj', 'ce', 'pros'}
+17 - categorias: {'psol', 'pdt', 'pt', 'psdb', 'sp', 'pcdob', 'es'}
+18 - categorias: {'psc', 'rj'}
+19 - categorias: {'psol', 'pdt', 'pt', 'df', 'prp', 'rj', 'dem', 'psc'}
+20 - categorias: {'es', 'rede', 'psl', 'df'}
+21 - categorias: {'psol', 'pdt', 'psdb', 'psl', 'prb', 'pmdb', 'sp', 'dem', 'pcdob', 'rede', 'pr'}
+22 - categorias: set()
+23 - categorias: set()
+24 - categorias: set()
+25 - categorias: set()
+26 - categorias: set()
+27 - categorias: {'df', 'al', 'pmdb', 'mg', 'ce', 'pr', 'ac'}
+28 - categorias: set()
+29 - categorias: {'rede', 'psl', 'pdt'}
+30 - categorias: {'to', 'pdt', 'pt', 'phs', 'df', 'rede'}
+31 - categorias: {'psdb', 'pdt', 'psl', 'prb', 'sp'}
+32 - categorias: {'pt', 'rj', 'sp', 'rede', 'pr'}
+33 - categorias: {'pmdb', 'pt', 'rs', 'pcdob'}
+34 - categorias: set()
+35 - categorias: set()
+36 - categorias: {'pr', 'ac', 'pt'}
+37 - categorias: set()
+38 - categorias: {'psdb', 'pdt', 'psl', 'prb', 'rj', 'sp', 'psb', 'es', 'pr'}
+39 - categorias: {'pr', 'ac', 'pt'}
+40 - categorias: set()
+41 - categorias: {'psdb', 'pdt', 'psl', 'prb', 'rj', 'sp', 'psb', 'es', 'pr'}
+42 - categorias: set()
+43 - categorias: set()
+44 - categorias: {'psdb', 'psl', 'prb', 'rj', 'sp', 'ac'}
+45 - categorias: set()
+46 - categorias: {'psdb', 'pdt', 'psl', 'prb', 'sp', 'psb', 'es', 'pr'}
+47 - categorias: {'psdb', 'psl', 'prb', 'rj', 'sp', 'psb'}
+48 - categorias: {'psdb', 'pdt', 'psl', 'pmdb', 'sp', 'dem', 'rede'}
+49 - categorias: set()
+50 - categorias: {'psdb', 'pdt', 'psd', 'pp', 'psl', 'prb', 'pmdb', 'sp', 'dem', 'ptc'}
+51 - categorias: {'psdb', 'psd', 'prb', 'sp', 'es'}
+52 - categorias: {'psdb', 'pt', 'pps', 'go', 'sp'}
+53 - categorias: {'psdb', 'sp'}
+54 - categorias: {'pdt', 'psl', 'rj', 'sp', 'ce'}
+55 - categorias: set()
+56 - categorias: {'psb', 'sp'}
+57 - categorias: {'psb', 'psdb', 'sp'}
+58 - categorias: {'psb', 'sp'}
+59 - categorias: {'pb', 'psdb', 'pt', 'sp', 'psb', 'pr', 'ac'}
+60 - categorias: {'psb', 'psdb', 'ac', 'sp'}
+61 - categorias: {'psb', 'sp'}
+62 - categorias: {'rj', 'dem'}
+63 - categorias: {'psb', 'sp', 'df'}
+64 - categorias: {'rj', 'psl', 'ba'}
+65 - categorias: {'psol', 'rs'}
+66 - categorias: {'pr', 'ac', 'pt', 'ba'}
+67 - categorias: {'psdb', 'pt', 'psl', 'pmdb', 'rj', 'sp', 'psb'}
+68 - categorias: set()
+69 - categorias: {'psl'}
+70 - categorias: {'pr', 'sp', 'pt'}
+71 - categorias: set()
+72 - categorias: set()
+73 - categorias: set()
+74 - categorias: {'psdb', 'sp', 'mg'}
+75 - categorias: {'pr', 'pt'}
+76 - categorias: {'rede', 'am', 'pdt'}
+77 - categorias: {'psc', 'rj', 'pps'}
+78 - categorias: {'psdb', 'pmdb', 'rj', 'dem', 'ce', 'pr'}
+79 - categorias: set()
+80 - categorias: {'pi', 'psdb', 'pt', 'psd', 'pe', 'pps', 'ba', 'pmdb', 'ptb', 'dem', 'mg', 'pv'}
+81 - categorias: set()
+82 - categorias: set()
+83 - categorias: set()
+84 - categorias: {'psol', 'pdt', 'pt', 'rs', 'pcdob', 'pr'}
+85 - categorias: set()
+86 - categorias: set()
+87 - categorias: set()
+88 - categorias: {'psb', 'pt', 'rs', 'pcdob'}
+89 - categorias: {'psol', 'pdt', 'psd', 'pps', 'prp', 'pmdb'}
+90 - categorias: set()
+91 - categorias: set()
+92 - categorias: {'psdb', 'pps', 'pmdb', 'dem', 'ptb', 'pv'}
+93 - categorias: {'psdb', 'psl', 'rj', 'sp', 'rede', 'ac'}
+94 - categorias: {'psol', 'pt', 'psl', 'ba', 'ac'}
+95 - categorias: {'pb', 'pdt', 'pt', 'pe', 'mg', 'psb', 'pros'}
+96 - categorias: set()
+97 - categorias: set()
+98 - categorias: {'pp', 'df', 'prb', 'rj', 'dem', 'pr'}
+99 - categorias: {'psdb', 'pt', 'pmdb', 'sp', 'psb'}
+100 - categorias: {'pdt', 'pt', 'pps', 'pmdb', 'dem', 'pcdob', 'psc', 'pp', 'psl', 'ptb', 'psb', 'rj', 'rede', 'pi', 'psdb', 'psd', 'prb', 'sp', 'mg', 'pr', 'pv'}
+101 - categorias: {'pp', 'psl', 'rs', 'df', 'prb', 'sc', 'sp', 'mg', 'dem', 'pr'}
+102 - categorias: {'psdb', 'pt', 'am', 'pmdb', 'sp', 'mg', 'ac'}
+103 - categorias: {'sp'}
+104 - categorias: {'pr', 'ac', 'pt'}
+105 - categorias: set()
+106 - categorias: {'psdb', 'pdt', 'psl', 'prb', 'rj', 'sp', 'psb', 'es', 'pr'}
+107 - categorias: set()
+108 - categorias: set()
+109 - categorias: {'psdb', 'psl', 'prb', 'rj', 'sp', 'ac'}
+110 - categorias: set()
+111 - categorias: {'psdb', 'pdt', 'psl', 'prb', 'sp', 'psb', 'es', 'pr'}
+112 - categorias: {'psdb', 'psl', 'prb', 'rj', 'sp', 'psb'}
+113 - categorias: {'psdb', 'pdt', 'psl', 'pmdb', 'sp', 'dem', 'rede'}
+114 - categorias: set()
+115 - categorias: {'psdb', 'pdt', 'psd', 'pp', 'psl', 'prb', 'pmdb', 'sp', 'dem', 'ptc'}
+116 - categorias: {'psdb', 'psd', 'prb', 'sp', 'es'}
+117 - categorias: {'psdb', 'pt', 'pps', 'go', 'sp'}
+118 - categorias: {'psdb', 'sp'}
+119 - categorias: {'pdt', 'psl', 'rj', 'sp', 'ce'}
+120 - categorias: set()
+121 - categorias: {'psb', 'sp'}
+122 - categorias: {'psb', 'psdb', 'sp'}
+123 - categorias: {'psb', 'sp'}
+124 - categorias: {'pb', 'psdb', 'pt', 'sp', 'psb', 'pr', 'ac'}
+125 - categorias: {'psb', 'psdb', 'ac', 'sp'}
+126 - categorias: {'psb', 'sp'}
+127 - categorias: {'rj', 'dem'}
+128 - categorias: {'psb', 'sp', 'df'}
+129 - categorias: {'rj', 'psl', 'ba'}
+130 - categorias: {'psol', 'rs'}

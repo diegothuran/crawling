@@ -1,0 +1,41 @@
+
+0 - categorias: {'pcdob', 'pdt', 'psdb', 'psd', 'psl', 'pmdb', 'df', 'pr', 'rede', 'pt'}
+1 - categorias: set()
+2 - categorias: {'pstu', 'se'}
+3 - categorias: {'sp', 'psdb', 'pmdb'}
+4 - categorias: set()
+5 - categorias: {'pcdob', 'pdt', 'psol', 'psdb', 'psb', 'ptc', 'psd', 'psc', 'prp', 'pmdb', 'dem', 'pps', 'pr', 'ppl', 'pt', 'sp', 'pp'}
+6 - categorias: {'rj', 'pdt', 'es', 'psl', 'pmdb', 'df', 'pr', 'rede', 'ac', 'pt', 'sp'}
+7 - categorias: {'sp', 'pmdb'}
+8 - categorias: {'psl', 'pmdb', 'pa', 'ce', 'pt', 'rr'}
+9 - categorias: set()
+10 - categorias: {'pcdob', 'psb', 'ba', 'df', 'am'}
+11 - categorias: set()
+12 - categorias: {'rj', 'pdt', 'psdb', 'mt', 'ro', 'es', 'pa', 'ms', 'mg', 'sp'}
+13 - categorias: {'rj', 'psdb', 'es', 'psl', 'ac', 'sp'}
+14 - categorias: {'pdt', 'pmdb', 'psdb', 'ce'}
+15 - categorias: {'rj', 'psl', 'pmdb'}
+16 - categorias: {'pdt', 'sp', 'psl'}
+17 - categorias: {'pdt', 'sp', 'psl'}
+18 - categorias: {'pdt', 'sp'}
+19 - categorias: {'pcdob', 'pdt', 'psdb', 'psb', 'psl', 'rede', 'ce', 'ac'}
+20 - categorias: {'rede', 'pdt', 'psdb'}
+21 - categorias: {'pcdob', 'pdt', 'psdb', 'psb', 'psl', 'rede', 'pt', 'sp'}
+22 - categorias: {'pdt'}
+23 - categorias: {'pdt', 'rj', 'psdb', 'psl', 'rede'}
+24 - categorias: {'pdt'}
+25 - categorias: {'prb', 'sp', 'pp'}
+26 - categorias: {'rj', 'pdt', 'psdb', 'al', 'pe', 'psl', 'pmdb', 'rede', 'ce'}
+27 - categorias: {'ptb', 'pr', 'pmdb'}
+28 - categorias: {'ac', 'ap', 'sp', 'rede'}
+29 - categorias: {'pdt', 'psdb', 'psb', 'pmdb', 'pps', 'pros', 'ce'}
+30 - categorias: {'al', 'pt', 'pmdb'}
+31 - categorias: {'pdt', 'psdb', 'psb', 'pe', 'pr', 'ce', 'ac', 'mg', 'pt', 'sp', 'pp'}
+32 - categorias: {'pdt', 'pi', 'psdb', 'ba', 'al', 'psl', 'pmdb', 'df', 'dem', 'pps', 'pr', 'rede', 'ce', 'ms', 'mg', 'pt'}
+33 - categorias: set()
+34 - categorias: {'rj', 'ptb', 'pen', 'psdb', 'prtb', 'psd', 'psl', 'prp', 'dem', 'pr', 'psdc', 'pros', 'phs', 'rr'}
+35 - categorias: {'sp', 'psdb'}
+36 - categorias: {'pdt', 'ba', 'psb', 'pr', 'ce', 'pt', 'sp'}
+37 - categorias: {'prb', 'sp', 'psdb', 'ce'}
+38 - categorias: {'pdt', 'psdb', 'psb', 'pmdb', 'pps', 'pros', 'ce'}
+39 - categorias: {'pt', 'sp', 'psl'}

@@ -2,6 +2,9 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
+import os
+from Util import check_news, download_image
+import urllib3
 
 def join_strings(list_of_strings):
     """
@@ -9,15 +12,19 @@ def join_strings(list_of_strings):
     :param list_of_strings: Lista com os tokens
     :return: sentença formada pela união dos tokens
     """
-    return " ".join(list_of_strings)
+    return "<p>".join(list_of_strings)
 
 
 #Função para o Web crawler
 def web_crawler(url_partida, limite_links):
-    resultados = {'titulos': [], 'links': [], 'noticia': []}
+    if os.path.exists('resultados-uol2.csv'):
+        resultados = pd.read_csv('resultados-uol2.csv')
+    else:
+        resultados = pd.DataFrame({'titulos': [], 'links': [], 'noticia': [], 'image': []})
+        
+        
     for j in range(1, int(limite_links/10)+1):
         lista_links.append(url_partida + "#?next=0001H1294U" + str(30 * j) + "N")
-    #Para cada url armazenada na lista
 
 
     #Recupera o código fonte da URL
@@ -29,65 +36,92 @@ def web_crawler(url_partida, limite_links):
 
     #Para cada link recuperado
     for titulo, link in zip(links_coletados, links_links):
-        resultados['titulos'].append(titulo.contents[0])
-        resultados['links'].append(link.get('href'))
-        link_ = link.get('href')
-        print(link_)
-        req = requests.get(link_)
+        row = {'titulos': [], 'links': [], 'noticia': [], 'image': []}
+        row['titulos'].append(titulo.contents[0])
+        row['links'].append(link.get('href'))
 
-        try:
-            bs = BeautifulSoup(req.text).find('div', id= 'texto').find_all('p')
-            noticia = []
-            for p in bs:
-                text = p.contents[0]
-                if isinstance(text, str):
-                    noticia.append(p.contents[0])
-            resultados['noticia'].append(join_strings(noticia))
-        except:
+        print(str(titulo.contents[0]))
+
+        if not check_news(resultados, str(titulo.contents[0])):
+            link_ = link.get('href')
+            req = requests.get(link_)
+
             try:
-                bs = BeautifulSoup(req.text).find('div', class_='desc').find_all('p', class_='text-description')
+                bs = BeautifulSoup(req.text).find('div', id= 'texto').find_all('p')
+                images = BeautifulSoup(req.text).find('div', id= 'texto').find_all('img')
+                src = images[0].get('src')
+                path_image = os.path.split(src)[-1]
                 noticia = []
+                row['image'].append(path_image)
+                download_image(src, os.path.join('images', path_image))
                 for p in bs:
                     text = p.contents[0]
                     if isinstance(text, str):
                         noticia.append(p.contents[0])
-                resultados['noticia'].append(join_strings(noticia))
+                row['noticia'].append(join_strings(noticia))
             except:
                 try:
-                    bs = BeautifulSoup(req.text).find('article', class_='l-content-text__container').find_all('p')
+                    bs = BeautifulSoup(req.text).find('div', class_='desc').find_all('p', class_='text-description')
                     noticia = []
-                    for l in range(len(bs)-1):
-                        text = bs[l].contents[0]
+                    for p in bs:
+                        text = p.contents[0]
                         if isinstance(text, str):
                             noticia.append(p.contents[0])
-                    resultados['noticia'].append(join_strings(noticia))
+                    row['noticia'].append(join_strings(noticia))
+                    row['image'].append(0)
                 except:
                     try:
-                        bs = BeautifulSoup(req.text).find('div',
-                                                          class_='text').find_all(
-                            'p')
+                        bs = BeautifulSoup(req.text).find('article', class_='l-content-text__container').find_all('p')
+                        #
+                        images = BeautifulSoup(req.text).find('div', id='l-content-text__head--medial-content-text__head--media').find_all('img')
+                        src = images[0].get('src')
+                        path_image = os.path.split(src)[-1]
                         noticia = []
-                        for p in bs:
-                            text = p.contents[0]
+                        row['image'].append(path_image)
+                        download_image(src, os.path.join('images', path_image))
+                        for l in range(len(bs)-1):
+                            text = bs[l].contents[0]
                             if isinstance(text, str):
                                 noticia.append(p.contents[0])
-                        resultados['noticia'].append(join_strings(noticia))
+                        row['noticia'].append(join_strings(noticia))
+                        row['image'].append(0)
                     except:
                         try:
                             bs = BeautifulSoup(req.text).find('div',
-                                                              class_='c-news__body').find_all(
+                                                              class_='text').find_all(
                                 'p')
                             noticia = []
                             for p in bs:
                                 text = p.contents[0]
                                 if isinstance(text, str):
                                     noticia.append(p.contents[0])
-                            resultados['noticia'].append(join_strings(noticia))
+                            row['noticia'].append(join_strings(noticia))
+                            row['image'].append(0)
                         except:
-                            resultados['noticia'].append(0)
+                            try:
+                                bs = BeautifulSoup(req.text).find('div',
+                                                                  class_='c-news__body').find_all(
+                                    'p')
+                                noticia = []
+                                for p in bs:
+                                    text = p.contents[0]
+                                    if isinstance(text, str):
+                                        noticia.append(p.contents[0])
+                                row['noticia'].append(join_strings(noticia))
+                                row['image'].append(0)
+                            except:
+                                row['noticia'].append(0)
+                                row['image'].append(0)
+            try:
+                row = pd.DataFrame(row)
+                resultados = resultados.append(row)
+            except:
+                pass
+
 
 
     for url in lista_links:
+        row = {'titulos': [], 'links': [], 'noticia': []}
         try:
             wd = webdriver.Chrome('Utilidades/chromedriver')
             wd.get(url)
@@ -98,61 +132,71 @@ def web_crawler(url_partida, limite_links):
             links_coletados = soup.find('div', class_='itens-indice').find_all('span', limit=None)
             links_links = soup.find('div', class_='itens-indice').find_all('a')
             for titulo, link in zip(links_coletados, links_links):
-                resultados['titulos'].append(titulo.contents[0])
-                resultados['links'].append(link.get('href'))
-                link_ = link.get('href')
-                print(link_)
-                req = requests.get(link_)
+                row = {'titulos': [], 'links': [], 'noticia': [], 'image': []}
+                row['titulos'].append(titulo.contents[0])
+                row['links'].append(link.get('href'))
 
-                try:
-                    bs = BeautifulSoup(req.text).find('div', id='texto').find_all('p')
-                    noticia = []
-                    for p in bs:
-                        text = p.contents[0]
-                        if isinstance(text, str):
-                            noticia.append(p.contents[0])
-                    resultados['noticia'].append(join_strings(noticia))
-                except:
+                print(str(titulo.contents[0]))
+
+                if not check_news(resultados, str(titulo.contents[0])):
+                    link_ = link.get('href')
+                    req = requests.get(link_)
+
                     try:
-                        bs = BeautifulSoup(req.text).find('div', class_='desc').find_all('p', class_='text-description')
+                        bs = BeautifulSoup(req.text).find('div', id='texto').find_all('p')
+                        images = BeautifulSoup(req.text).find('div', id='texto').find_all('img')
+                        src = images[0].get('src')
+                        path_image = os.path.split(src)[-1]
                         noticia = []
+                        row['image'].append(path_image)
+                        download_image(src, os.path.join('images', path_image))
                         for p in bs:
                             text = p.contents[0]
                             if isinstance(text, str):
                                 noticia.append(p.contents[0])
-                        resultados['noticia'].append(join_strings(noticia))
+                        row['noticia'].append(join_strings(noticia))
                     except:
                         try:
-                            bs = BeautifulSoup(req.text).find('article', class_='l-content-text__container').find_all(
-                                'p')
+                            bs = BeautifulSoup(req.text).find('div', class_='desc').find_all('p',
+                                                                                             class_='text-description')
                             noticia = []
-                            for l in range(len(bs) - 1):
-                                text = bs[l].contents[0]
+                            for p in bs:
+                                text = p.contents[0]
                                 if isinstance(text, str):
-                                    noticia.append(text)
-                            resultados['noticia'].append(join_strings(noticia))
+                                    noticia.append(p.contents[0])
+                            row['noticia'].append(join_strings(noticia))
+                            row['image'].append(0)
                         except:
                             try:
-                                bs = BeautifulSoup(req.text).find('div',
-                                                                  class_='text').find_all(
-                                    'p')
+                                bs = BeautifulSoup(req.text).find('article',
+                                                                  class_='l-content-text__container').find_all('p')
+                                #
+                                images = BeautifulSoup(req.text).find('div',
+                                                                      id='l-content-text__head--medial-content-text__head--media').find_all(
+                                    'img')
+                                src = images[0].get('src')
+                                path_image = os.path.split(src)[-1]
                                 noticia = []
-                                for p in bs:
-                                    text = p.contents[0]
+                                row['image'].append(path_image)
+                                download_image(src, os.path.join('images', path_image))
+                                for l in range(len(bs) - 1):
+                                    text = bs[l].contents[0]
                                     if isinstance(text, str):
                                         noticia.append(p.contents[0])
-                                resultados['noticia'].append(join_strings(noticia))
+                                row['noticia'].append(join_strings(noticia))
+                                row['image'].append(0)
                             except:
                                 try:
                                     bs = BeautifulSoup(req.text).find('div',
-                                                                      class_='c-news__body').find_all(
+                                                                      class_='text').find_all(
                                         'p')
                                     noticia = []
                                     for p in bs:
                                         text = p.contents[0]
                                         if isinstance(text, str):
                                             noticia.append(p.contents[0])
-                                    resultados['noticia'].append(join_strings(noticia))
+                                    row['noticia'].append(join_strings(noticia))
+                                    row['image'].append(0)
                                 except:
                                     try:
                                         bs = BeautifulSoup(req.text).find('div',
@@ -163,16 +207,23 @@ def web_crawler(url_partida, limite_links):
                                             text = p.contents[0]
                                             if isinstance(text, str):
                                                 noticia.append(p.contents[0])
-                                        resultados['noticia'].append(join_strings(noticia))
+                                        row['noticia'].append(join_strings(noticia))
+                                        row['image'].append(0)
                                     except:
-                                        resultados['noticia'].append(0)
+                                        row['noticia'].append(0)
+                                        row['image'].append(0)
+                    try:
+                        row = pd.DataFrame(row)
+                        resultados = resultados.append(row)
+                    except:
+                        pass
         except:
             pass
 
     return resultados
 
 #Função para o Web scraper
-def web_scraper():
+def web_scraper(link, output_path):
     #Para cada link armazenado na lista de links
     for link in lista_links:
         #Recupera o código fonte
@@ -192,7 +243,7 @@ def web_scraper():
 #Inicia a lista_links
 lista_links = []
 #Define que o limite será de 10 links coletados
-limite_links = 1000
+limite_links = 20
 #Define a URL de partida
 url_partida = 'https://noticias.uol.com.br/politica/eleicoes/ultimas/'
 

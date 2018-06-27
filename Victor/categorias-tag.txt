@@ -1,0 +1,263 @@
+
+0 - estacoes: {'sp'}
+0 - categorias: {'mdb', 'psdb', 'psb'}
+1 - estacoes: set()
+1 - categorias: {'psl'}
+2 - estacoes: {'pr', 'sp'}
+2 - categorias: {'pt'}
+3 - estacoes: set()
+3 - categorias: set()
+4 - estacoes: set()
+4 - categorias: set()
+5 - estacoes: set()
+5 - categorias: set()
+6 - estacoes: {'mg', 'sp'}
+6 - categorias: {'psdb'}
+7 - estacoes: {'pr'}
+7 - categorias: {'psol', 'pdt', 'pcdob', 'pt'}
+8 - estacoes: set()
+8 - categorias: set()
+9 - estacoes: set()
+9 - categorias: set()
+10 - estacoes: {'pr'}
+10 - categorias: {'pt'}
+11 - estacoes: set()
+11 - categorias: set()
+12 - estacoes: {'rs'}
+12 - categorias: {'psol', 'pdt', 'pcdob', 'pt'}
+13 - estacoes: {'rs', 'pr'}
+13 - categorias: {'mdb', 'pdt', 'psb', 'pt', 'psdb', 'psd', 'pode'}
+14 - estacoes: {'ba', 'ap'}
+14 - categorias: {'psb', 'pt', 'psdb', 'dem', 'psc', 'psd', 'prb'}
+15 - estacoes: {'mg', 'df', 'sp'}
+15 - categorias: {'sd', 'psdb', 'dem', 'pps', 'pp', 'psl', 'prb'}
+16 - estacoes: {'am', 'ce', 'rj'}
+16 - categorias: {'psl', 'psdb', 'pros', 'pt'}
+17 - estacoes: {'es', 'sp'}
+17 - categorias: {'pdt', 'pt', 'psdb', 'psol', 'pcdob'}
+18 - estacoes: {'rj'}
+18 - categorias: {'psc'}
+19 - estacoes: {'df', 'rj'}
+19 - categorias: {'pdt', 'pt', 'dem', 'psc', 'prp', 'psol', 'pode'}
+20 - estacoes: {'df', 'es'}
+20 - categorias: {'rede', 'psl'}
+21 - estacoes: {'pr', 'sp'}
+21 - categorias: {'mdb', 'pdt', 'dem', 'rede', 'psdb', 'psol', 'psl', 'prb', 'pcdob', 'pode'}
+22 - estacoes: set()
+22 - categorias: set()
+23 - estacoes: set()
+23 - categorias: set()
+24 - estacoes: set()
+24 - categorias: set()
+25 - estacoes: set()
+25 - categorias: set()
+26 - estacoes: set()
+26 - categorias: set()
+27 - estacoes: {'df', 'ce', 'mg', 'al', 'pr'}
+27 - categorias: {'mdb'}
+28 - estacoes: set()
+28 - categorias: set()
+29 - estacoes: set()
+29 - categorias: {'rede', 'psl', 'pdt'}
+30 - estacoes: {'to', 'df'}
+30 - categorias: {'pt', 'rede', 'phs', 'pdt'}
+31 - estacoes: {'sp'}
+31 - categorias: {'psdb', 'psl', 'prb', 'pdt'}
+32 - estacoes: {'pr', 'rj', 'sp'}
+32 - categorias: {'rede', 'pt'}
+33 - estacoes: {'rs'}
+33 - categorias: {'pcdob', 'pt'}
+34 - estacoes: set()
+34 - categorias: set()
+35 - estacoes: set()
+35 - categorias: set()
+36 - estacoes: {'pr'}
+36 - categorias: {'pt'}
+37 - estacoes: set()
+37 - categorias: set()
+38 - estacoes: {'pr', 'sp', 'rj', 'es'}
+38 - categorias: {'pdt', 'psb', 'psdb', 'psl', 'prb'}
+39 - estacoes: {'pr'}
+39 - categorias: {'pt'}
+40 - estacoes: set()
+40 - categorias: set()
+41 - estacoes: {'pr', 'sp', 'rj', 'es'}
+41 - categorias: {'pdt', 'psb', 'psdb', 'psl', 'prb'}
+42 - estacoes: set()
+42 - categorias: set()
+43 - estacoes: set()
+43 - categorias: set()
+44 - estacoes: {'rj', 'sp'}
+44 - categorias: {'psdb', 'psl', 'prb'}
+45 - estacoes: set()
+45 - categorias: set()
+46 - estacoes: {'pr', 'es', 'sp'}
+46 - categorias: {'pdt', 'psb', 'psdb', 'psl', 'prb'}
+47 - estacoes: {'rj', 'sp'}
+47 - categorias: {'psb', 'psdb', 'psl', 'prb'}
+48 - estacoes: {'sp'}
+48 - categorias: {'mdb', 'pdt', 'rede', 'psdb', 'dem', 'psl'}
+49 - estacoes: set()
+49 - categorias: set()
+50 - estacoes: {'sp'}
+50 - categorias: {'mdb', 'pdt', 'ptc', 'psdb', 'dem', 'pp', 'psd', 'psl', 'prb'}
+51 - estacoes: {'es', 'sp'}
+51 - categorias: {'psd', 'psdb', 'prb'}
+52 - estacoes: {'go', 'sp'}
+52 - categorias: {'psdb', 'pps', 'pt'}
+53 - estacoes: {'sp'}
+53 - categorias: {'psdb'}
+54 - estacoes: {'ce', 'rj', 'sp'}
+54 - categorias: {'psl', 'pdt'}
+55 - estacoes: set()
+55 - categorias: set()
+56 - estacoes: {'sp'}
+56 - categorias: {'psb'}
+57 - estacoes: {'sp'}
+57 - categorias: {'psdb', 'psb'}
+58 - estacoes: {'sp'}
+58 - categorias: {'psb'}
+59 - estacoes: {'pr', 'sp', 'pb'}
+59 - categorias: {'psdb', 'psb', 'pt'}
+60 - estacoes: {'sp'}
+60 - categorias: {'psdb', 'psb'}
+61 - estacoes: {'sp'}
+61 - categorias: {'psb'}
+62 - estacoes: {'rj'}
+62 - categorias: {'dem'}
+63 - estacoes: {'df', 'sp'}
+63 - categorias: {'psb'}
+64 - estacoes: {'ba', 'rj'}
+64 - categorias: {'psl'}
+65 - estacoes: {'rs'}
+65 - categorias: {'psol'}
+66 - estacoes: {'ba', 'ac', 'pr'}
+66 - categorias: {'pt'}
+67 - estacoes: {'rj', 'sp'}
+67 - categorias: {'mdb', 'psb', 'pt', 'psdb', 'psl'}
+68 - estacoes: set()
+68 - categorias: set()
+69 - estacoes: set()
+69 - categorias: {'psl'}
+70 - estacoes: {'pr', 'sp'}
+70 - categorias: {'pt'}
+71 - estacoes: set()
+71 - categorias: set()
+72 - estacoes: set()
+72 - categorias: set()
+73 - estacoes: set()
+73 - categorias: set()
+74 - estacoes: {'mg', 'sp'}
+74 - categorias: {'psdb'}
+75 - estacoes: {'pr'}
+75 - categorias: {'pt'}
+76 - estacoes: {'am'}
+76 - categorias: {'rede', 'pdt'}
+77 - estacoes: {'rj'}
+77 - categorias: {'psc', 'pps'}
+78 - estacoes: {'ce', 'rj', 'pr'}
+78 - categorias: {'mdb', 'dem', 'psdb'}
+79 - estacoes: set()
+79 - categorias: set()
+80 - estacoes: {'ba', 'pe', 'pi', 'mg'}
+80 - categorias: {'ptb', 'mdb', 'pv', 'pt', 'psdb', 'dem', 'pps', 'psd'}
+81 - estacoes: set()
+81 - categorias: set()
+82 - estacoes: set()
+82 - categorias: set()
+83 - estacoes: set()
+83 - categorias: set()
+84 - estacoes: {'rs', 'pr'}
+84 - categorias: {'psol', 'pdt', 'pcdob', 'pt'}
+85 - estacoes: set()
+85 - categorias: set()
+86 - estacoes: set()
+86 - categorias: set()
+87 - estacoes: set()
+87 - categorias: set()
+88 - estacoes: {'rs'}
+88 - categorias: {'pcdob', 'psb', 'pt'}
+89 - estacoes: set()
+89 - categorias: {'pdt', 'pps', 'prp', 'psd', 'psol'}
+90 - estacoes: set()
+90 - categorias: set()
+91 - estacoes: set()
+91 - categorias: set()
+92 - estacoes: set()
+92 - categorias: {'ptb', 'mdb', 'pv', 'psdb', 'dem', 'pps'}
+93 - estacoes: {'rj', 'sp'}
+93 - categorias: {'rede', 'psl', 'psdb'}
+94 - estacoes: {'ba'}
+94 - categorias: {'psol', 'psl', 'pt'}
+95 - estacoes: {'mg', 'pe', 'pb'}
+95 - categorias: {'pros', 'psb', 'pt', 'pdt'}
+96 - estacoes: set()
+96 - categorias: set()
+97 - estacoes: set()
+97 - categorias: set()
+98 - estacoes: {'df', 'pr', 'rj'}
+98 - categorias: {'sd', 'pp', 'prb', 'dem'}
+99 - estacoes: {'sp'}
+99 - categorias: {'mdb', 'psdb', 'psb', 'pt'}
+100 - estacoes: {'mg', 'rj', 'sp', 'pi', 'pr'}
+100 - categorias: {'ptb', 'mdb', 'pv', 'pdt', 'psb', 'pt', 'psdb', 'dem', 'rede', 'pps', 'psc', 'pp', 'psd', 'psl', 'prb', 'pcdob', 'pode'}
+101 - estacoes: {'mg', 'rs', 'df', 'sc', 'sp', 'pr'}
+101 - categorias: {'sd', 'dem', 'pp', 'psl', 'prb'}
+102 - estacoes: {'mg', 'am', 'sp'}
+102 - categorias: {'mdb', 'psdb', 'pt'}
+103 - estacoes: {'sp'}
+103 - categorias: set()
+104 - estacoes: {'pr'}
+104 - categorias: {'pt'}
+105 - estacoes: set()
+105 - categorias: set()
+106 - estacoes: {'pr', 'sp', 'rj', 'es'}
+106 - categorias: {'pdt', 'psb', 'psdb', 'psl', 'prb'}
+107 - estacoes: set()
+107 - categorias: set()
+108 - estacoes: set()
+108 - categorias: set()
+109 - estacoes: {'rj', 'sp'}
+109 - categorias: {'psdb', 'psl', 'prb'}
+110 - estacoes: set()
+110 - categorias: set()
+111 - estacoes: {'pr', 'es', 'sp'}
+111 - categorias: {'pdt', 'psb', 'psdb', 'psl', 'prb'}
+112 - estacoes: {'rj', 'sp'}
+112 - categorias: {'psb', 'psdb', 'psl', 'prb'}
+113 - estacoes: {'sp'}
+113 - categorias: {'mdb', 'pdt', 'rede', 'psdb', 'dem', 'psl'}
+114 - estacoes: set()
+114 - categorias: set()
+115 - estacoes: {'sp'}
+115 - categorias: {'mdb', 'pdt', 'ptc', 'psdb', 'dem', 'pp', 'psd', 'psl', 'prb'}
+116 - estacoes: {'es', 'sp'}
+116 - categorias: {'psd', 'psdb', 'prb'}
+117 - estacoes: {'go', 'sp'}
+117 - categorias: {'psdb', 'pps', 'pt'}
+118 - estacoes: {'sp'}
+118 - categorias: {'psdb'}
+119 - estacoes: {'ce', 'rj', 'sp'}
+119 - categorias: {'psl', 'pdt'}
+120 - estacoes: set()
+120 - categorias: set()
+121 - estacoes: {'sp'}
+121 - categorias: {'psb'}
+122 - estacoes: {'sp'}
+122 - categorias: {'psdb', 'psb'}
+123 - estacoes: {'sp'}
+123 - categorias: {'psb'}
+124 - estacoes: {'pr', 'sp', 'pb'}
+124 - categorias: {'psdb', 'psb', 'pt'}
+125 - estacoes: {'sp'}
+125 - categorias: {'psdb', 'psb'}
+126 - estacoes: {'sp'}
+126 - categorias: {'psb'}
+127 - estacoes: {'rj'}
+127 - categorias: {'dem'}
+128 - estacoes: {'df', 'sp'}
+128 - categorias: {'psb'}
+129 - estacoes: {'ba', 'rj'}
+129 - categorias: {'psl'}
+130 - estacoes: {'rs'}
+130 - categorias: {'psol'}
