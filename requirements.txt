@@ -35,7 +35,7 @@ selenium==3.11.0
 service-identity==17.0.0
 six==1.11.0
 slimit==0.8.1
-Twisted==17.9.0
+Twisted==22.10.0
 urllib3==1.22
 w3lib==1.19.0
 webencodings==0.5.1
